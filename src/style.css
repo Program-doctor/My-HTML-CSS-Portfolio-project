@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+:root{
+    --clr-yellow:#fbff00;
+    --bs-gutter-x:1.5rem;
+}
 *,*::before,*::after{
     margin: 0;
     padding: 0;
@@ -76,27 +80,6 @@ ul li a::before{
 }
 ul li:hover a::before{
     transform: skewX(45deg) translateX(200%);
-
-}
-ul li::before{
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -5px;
-    width: 30px;
-    height: 10px;
-    background: #f00;
-    border-radius: 10px;
-    transition: .5s;
-    transition-delay: 0s;
-}
-ul li:hover::before{
-    bottom: 0px;
-    height: 50%;
-    width: 75%;
-    border-radius: 30px;
-    transition-delay: .5s;
 }
 ul li::before{
     content: '';
@@ -147,14 +130,22 @@ ul li:nth-child(1)::after{
                 0 0 60px #ff1f71
                 ;
 }
-ul li:nth-child(2)::before,
-ul li:nth-child(2)::after{
+ul li:nth-child(4)::after
+{
     background: #2bd2ff;
     box-shadow: 0 0 5px #2bd2ff,
                 0 0 15px #2bd2ff,
                 0 0 30px #2bd2ff,
                 0 0 60px #2bd2ff
                 ;
+            }
+            ul li:nth-child(4)::before{
+                background:#d400d4;
+                box-shadow: 0 0 5px #d400d4,
+                            0 0 15px #d400d4,
+                            0 0 30px #d400d4,
+                            0 0 60px #d400d4
+                            ;
 }
 ul li:nth-child(3)::before,
 ul li:nth-child(3)::after{
@@ -164,6 +155,21 @@ ul li:nth-child(3)::after{
                 0 0 30px #fbff00,
                 0 0 60px #fbff00
                 ;
+}
+ul li:nth-child(2)::before,
+ul li:nth-child(2)::after{
+    background:#d400d4;
+    box-shadow: 0 0 5px #d400d4,
+                0 0 15px #d400d4,
+                0 0 30px #d400d4,
+                0 0 60px #d400d4
+                ;
+}
+.active{
+    color: #ffffff72;
+}
+.active:hover{
+    color: white;
 }
 .card{
     margin-top: 50px;
@@ -365,6 +371,23 @@ ul li:nth-child(3)::after{
 .click:hover{
     text-decoration: underline;
 }
+.about{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+}
+.about>*{
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 36px;
+}
 @media (max-width:930px) {
    header{
        max-width: 100%;
@@ -399,6 +422,12 @@ ul li:nth-child(3)::after{
     .more p{
         font-size: 15px;
     }
+    .about{
+        flex-direction: column;
+    }
+    .about>*{
+        text-align: center;
+    }
 }
 @media (max-width:480px) {
     .card{
@@ -424,6 +453,9 @@ ul li:nth-child(3)::after{
         .more p{
             line-height: 40px;
 
+        }
+        .my-world h1{
+            margin: auto;
         }
 }
 
