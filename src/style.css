@@ -15,6 +15,7 @@ body{
     color: white;
     max-width: 100%;
     box-sizing: border-box;
+    font-family:'Poppins', serif;
 }
 header{
     display: flex;
@@ -431,6 +432,9 @@ ul li:nth-child(2)::after{
     .about>*{
         text-align: center;
     }
+    textarea{
+        width: 80%;
+    }
 }
 @media (max-width:480px) {
     .card{
@@ -462,9 +466,6 @@ ul li:nth-child(2)::after{
         }
         .reach-out{
             text-align: center;
-        }
-        input{
-            width: 0%;
         }
         textarea{
             width: 80%;
