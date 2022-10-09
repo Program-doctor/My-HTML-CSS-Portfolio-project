@@ -464,7 +464,7 @@ ul li:nth-child(2)::after{
             text-align: center;
         }
         input{
-            width: 50%;
+            width: 0%;
         }
         textarea{
             width: 80%;
