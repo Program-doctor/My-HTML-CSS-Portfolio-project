@@ -10,14 +10,16 @@ header{
     padding-bottom: 120px;
 }
 textarea{
+    position: relative;
+    z-index: 15;
     display: block;
     margin-left: 50px;
     margin-bottom: 20px;
     margin-top: 10px;
     font-size: 1.4em;
     caret-color: #000;
-    border-color: #fbff00;
-    outline: #fbff00;
+    border-color: #800080;
+    outline: var(--primary-clr);
     padding: 10px;
     word-spacing: 0px;
 }
@@ -27,14 +29,14 @@ form{
     padding-bottom: 130px;
 }
 .feedback{
-    background-color: #fbff00;
+    background: var(--primary-clr);
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-modal{
+#popup{
     position: relative;
     z-index: 10;
 }
@@ -53,7 +55,7 @@ input{
     padding: 10px;
     width:85% ;
     background-color: #fff;
-    border-color: #fbff00;
+    border-color: var(--primary-clr);
     outline: none;
 }
 input[type="submit"]{
@@ -61,36 +63,37 @@ input[type="submit"]{
     padding: 15px;
     width: 85%;
     background-color: #fff;
-    color: #fbff00;
+    color: var(--secondary-clr);
     font-size: 1rem;
-    border-color: #fbff00;
+    border-color: var(--primary-clr);
     border-radius: 10px;
     box-shadow: 0 0px 5px rgba(0,0,0,.1);
     cursor: pointer;
     text-transform: uppercase;
     z-index: 10;
 }
-modal,.reach-out p{
+#popup,.reach-out p{
     font-size: 20px;
     text-align: center;
     padding:0 5px 0;
 }
-modal{width: 400px;
+#popup{width: 400px;
     background-color: #fff;
     color: #333;
     padding: 15px;
     border-radius: 6px;
     position: absolute;
-    top: -50%;
+    top:-75%;
     left: 50%;
-    transform: translate(-50%,-50%) scale(.1);
+     transform: translate(-50%,-50%) scale(.1);
     visibility: hidden;
-    transition: transform 0.5s, top 0.5s;
+    transition: transform 0.5s, top 0.5s; 
 }
-.open-popup{
+#popup.open-popup{
+    z-index: 10;
     top: 50%;
-    transform: translate(-50%,-50%) scale(1);
     visibility: visible;
+    transform: translate(-50%,-50%) scale(1);
 }
 .alert{
     display: flex;
@@ -98,22 +101,22 @@ modal{width: 400px;
     align-items: center;
     width: 90%;
 }
-modal input{width: 25%;
+#popup input{width: 25%;
     cursor: pointer;
     font-family:'Poppins', serif;
     justify-content: center;
-    background-color: #fbff00;
+    background-color: var(--secondary-clr);
     color: #fff;
     font-size: 18px;
-    border-color: none;
+    border-color: var(--primary-clr);
     text-transform: uppercase;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0,0,0,.2);
 }
-modal input:last-child{
+#popup input:last-child{
     margin-top: 23px;
 }
-modal h3{
+#popup h3{
     margin:-20px auto 10px ;
     font-weight: 500;
     font-size: 30px;
@@ -121,7 +124,7 @@ modal h3{
 i{position: relative;
     top: -35px;
     font-size: 40px;
-    color: #fbff00;
+    color: var(--secondary-clr);
     background-color: #fff;
     border-radius: 50%; 
     box-shadow: 0 2px 5px rgba(0,0,0,.2);
@@ -153,9 +156,8 @@ i{position: relative;
 }
 
 .wave .shape-fill {
-    fill: #fbff00;
+    fill: var(--primary-clr);
 }
-
 /** For tablet devices **/
 @media (min-width: 768px) and (max-width: 1023px) {
     .wave svg {
@@ -219,10 +221,10 @@ i{position: relative;
     #popup{
         width: 300px;
     }
-    modal h3{
+    #popup h3{
         font-size: 25px;
     }
-    modal input{
+    #popup input{
         width: 25%;
     }
 }

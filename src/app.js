@@ -13,20 +13,13 @@ panels.forEach(panel=>panel.addEventListener('click',toggleOpen));
 panels.forEach(panel=>panel.addEventListener('transitionend',toggleActive));
 
 let popup=document.querySelector('#popup');
-function showModal(){
+function showModal(e){
+    e.preventDefault();
     popup.classList.add("open-popup");
 }
-showModal();
 function closeModal(){
     popup.classList.remove("open-popup");
-}
-
-function handleSubmit(event){
-    event.preventDefualt;
 } 
 let comment=document.querySelector('#comment');
-comment.addEventListener('click', showModal);
-
-let form=document.querySelector('form');
-form.addEventListener('onsubmit', handleSubmit)
+comment.addEventListener('click',showModal);
 
