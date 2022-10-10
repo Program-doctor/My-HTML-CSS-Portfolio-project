@@ -11,7 +11,6 @@ header{
 }
 textarea{
     position: relative;
-    z-index: 15;
     display: block;
     margin-left: 50px;
     margin-bottom: 20px;
@@ -71,6 +70,12 @@ input[type="submit"]{
     cursor: pointer;
     text-transform: uppercase;
     z-index: 10;
+    transition: background-color .5s ease-in-out;
+    transition-delay: .2s;
+}
+input[type="submit"]:hover{
+    background-color: var(--secondary-clr);
+    color: white;
 }
 #popup,.reach-out p{
     font-size: 20px;
