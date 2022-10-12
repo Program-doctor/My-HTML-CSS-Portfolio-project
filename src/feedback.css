@@ -21,6 +21,7 @@ textarea{
     outline: var(--primary-clr);
     padding: 10px;
     word-spacing: 0px;
+    margin-bottom: 0;
 }
 
 form{
@@ -76,6 +77,15 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color: var(--secondary-clr);
     color: white;
+}
+small{margin-top: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
 }
 #popup,.reach-out p{
     font-size: 20px;

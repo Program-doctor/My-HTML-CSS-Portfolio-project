@@ -13,12 +13,29 @@ panels.forEach(panel=>panel.addEventListener('click',toggleOpen));
 panels.forEach(panel=>panel.addEventListener('transitionend',toggleActive));
 
 let popup=document.querySelector('#popup');
+
+let yesComment=document.querySelector('.alert #yes');
+
+let noComment=document.querySelector('.alert #no');
+
 function showModal(e){
     e.preventDefault();
-    popup.classList.add("open-popup");
+    let userComment=document.querySelector('#feedback');
+    if (userComment.value.trim() === ''){
+        userComment.innerText="Comment field cannot be left empty. Please leave a comment."
+    }else{
+        popup.classList.add("open-popup");
+    }
 }
 function closeModal(){
-    popup.classList.remove("open-popup");
+    yesComment.onclick=function(){
+        alert("Yippee! Glad you love it☺️😊");
+        popup.classList.remove("open-popup");
+    }
+    noComment.onclick=function(){
+        alert("Oops, sorry you didn't enjoy viewing this😢");
+        popup.classList.remove("open-popup");
+    }
 } 
 let comment=document.querySelector('#comment');
 comment.addEventListener('click',showModal);

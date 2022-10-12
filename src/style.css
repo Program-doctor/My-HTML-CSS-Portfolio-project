@@ -390,6 +390,32 @@ ul li:nth-child(2)::after{
     font-size: 18px;
     line-height: 36px;
 }
+::-webkit-scrollbar{
+    width: .8em;
+    height: .5em;
+}
+/* vertical::-webkit-scrollbar{
+    width: 0.2em;
+    height: .2em; 
+    background:white ;
+} */
+::-webkit-scrollbar-track{
+    margin-block: .3em;
+     background:linear-gradient(135deg,hsl(320, 80%, 77%),hsl(320,70%,90%));
+     border-radius: 100vw;
+} 
+::-webkit-scrollbar-thumb{
+    border-radius: 100vw;
+    background: linear-gradient(135deg,rgba(131, 49, 49,.5), purple, rgb(89, 89, 173));
+    border: .1px solid hsl(320, 80%, 77%);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(135deg,rgb(131, 49, 49), purple, rgb(89, 89, 173));
+}
+@supports (scrollbar-color: purple blue){
+    *{scrollbar-color: linear-gradient(135deg,rgba(131, 49, 49,.5), purple, rgb(89, 89, 173)) linear-gradient(135deg,hsl(320, 80%, 77%),hsl(320,70%,90%));
+    }
+}
 @media (max-width:930px) {
    header{
        max-width: 100%;
