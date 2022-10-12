@@ -67,25 +67,29 @@ input[type="submit"]{
     font-size: 1rem;
     border-color: var(--primary-clr);
     border-radius: 10px;
-    box-shadow: 0 0px 5px rgba(0,0,0,.1);
     cursor: pointer;
     text-transform: uppercase;
     z-index: 10;
     transition: background-color .5s ease-in-out;
     transition-delay: .2s;
+    box-shadow: 15px 15px rgba(0,0,0,.1);
 }
 input[type="submit"]:hover{
     background-color: var(--secondary-clr);
     color: white;
 }
-small{margin-top: 5px;
+form span{margin-top: 5px;
     margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
+    display: block;
+    font-weight: 500;
+    font-size: 0.75em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 5px 0;
     text-align: center;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
+}
+span.valid{
+    visibility: hidden;
 }
 #popup,.reach-out p{
     font-size: 20px;

@@ -21,9 +21,13 @@ let noComment=document.querySelector('.alert #no');
 function showModal(e){
     e.preventDefault();
     let userComment=document.querySelector('#feedback');
+    let message=document.querySelector('#text');
+    let form=document.querySelector('form');
     if (userComment.value.trim() === ''){
-        userComment.innerText="Comment field cannot be left empty. Please leave a comment."
+        message.innerHTML="Comment field cannot be left empty.";
+        message.style.color= "#f44336";
     }else{
+        message.classList.add('valid');
         popup.classList.add("open-popup");
     }
 }
