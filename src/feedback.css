@@ -87,6 +87,7 @@ form span{margin-top: 5px;
     text-transform: uppercase;
     padding: 5px 0;
     text-align: center;
+    z-index: 15;
 }
 span.valid{
     visibility: hidden;
@@ -177,6 +178,31 @@ i{position: relative;
 .wave .shape-fill {
     fill: var(--primary-clr);
 }
+.colors{
+    position: absolute;
+    background: #fff;
+    top: 100%;
+    right: 15%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.colors span{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 10px 5px;
+    background: var(--clr);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.clr{
+    border: 2px solid #000;
+    scale: 1.5;
+    transition: .5s;
+}
 /** For tablet devices **/
 @media (min-width: 768px) and (max-width: 1023px) {
     .wave svg {
@@ -187,6 +213,10 @@ i{position: relative;
 
 /** For mobile devices **/
 @media (max-width: 767px) {
+    .colors{
+        top: 130%;
+        right: 0%;
+    }
     .wave svg {
         width: calc(100% + 1.3px);
         height: 185px;
@@ -245,5 +275,9 @@ i{position: relative;
     }
     #popup input{
         width: 25%;
+    }
+    .colors{
+        right:auto ;
+        width: 45px;
     }
 }

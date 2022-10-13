@@ -22,12 +22,11 @@ function showModal(e){
     e.preventDefault();
     let userComment=document.querySelector('#feedback');
     let message=document.querySelector('#text');
-    let form=document.querySelector('form');
     if (userComment.value.trim() === ''){
         message.innerHTML="Comment field cannot be left empty.";
         message.style.color= "#f44336";
     }else{
-        message.classList.add('valid');
+        message.classList.add('valid'); 
         popup.classList.add("open-popup");
     }
 }
@@ -44,3 +43,23 @@ function closeModal(){
 let comment=document.querySelector('#comment');
 comment.addEventListener('click',showModal);
 
+let textarea=document.querySelector('textarea');
+let feedback=document.querySelector('.feedback');
+let shapeFill=document.querySelector('.shape-fill');
+
+function changeColors(color){
+    feedback.style.background=color;
+    shapeFill.style.fill=color;
+    comment.style.borderColor="white";
+    textarea.style.borderColor=color+"98";
+    comment.style.background=color;
+    comment.style.color="white";
+    let links=document.querySelectorAll('.reach-out a');
+ links.forEach(link=>{
+     link.style.color=color;
+ });
+ document.querySelectorAll('span').forEach(function(item){
+     item.classList.remove('clr')
+ })
+ event.target.classList.add('clr');
+}
