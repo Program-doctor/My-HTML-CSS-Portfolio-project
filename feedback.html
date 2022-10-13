@@ -46,11 +46,17 @@
         </header>
         <div class="feedback">
             <form action="">
-                <input type="text" name="" id="" placeholder="Please enter your name">
-                <input type="email" name="" placeholder="Please enter your email address" id="">
+                <div class="inputBox">
+                    <input type="text" name="" id="name" placeholder="Please enter your name">
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="email" name="" placeholder="Please enter your email address" id="email">
+                    <i></i>
+                </div>
                 <label for="feedback">Leave a feedback</label>
                 <textarea name="" id="feedback" cols="30" rows="15  " placeholder="Please leave a comment"></textarea><span id="text"></span>
-                <input type="submit" value="Comment" id="comment" required>
+                <input type="submit" value="Comment" id="comment" required="required">
             </form>
             <div id="popup">
                 <i class="fa-solid fa-circle-check" id="check"></i>
@@ -78,7 +84,7 @@
             <span style="--clr:rgb(89, 89, 173)" onclick="changeColors('rgb(89, 89, 173)')"></span>
             <span style="--clr:#ff6b6b" onclick="changeColors('#ff6b6b')"></span>
             <span style="--clr:#2e86de" onclick="changeColors('#2e86de')"></span>
-            <span style="--clr:#edf03d" onclick="changeColors('#edf03d')"></span>
+            <span style="--clr:#ff9f43" onclick="changeColors('#ff9f43')"></span>
             <span style="--clr:#f368e0" onclick="changeColors('#f368e0')"></span>
         </div>
     </section>

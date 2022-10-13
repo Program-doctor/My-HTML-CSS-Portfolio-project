@@ -50,7 +50,7 @@ let shapeFill=document.querySelector('.shape-fill');
 function changeColors(color){
     feedback.style.background=color;
     shapeFill.style.fill=color;
-    comment.style.borderColor="white";
+    comment.style.borderColor="#fff";
     textarea.style.borderColor=color+"98";
     comment.style.background=color;
     comment.style.color="white";
